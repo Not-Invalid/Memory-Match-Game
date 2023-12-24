@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en" dir="ltr"> 
+  <head> 
+    <meta charset="utf-8"> 
+    <title>Memory Match</title> 
+    <link rel="stylesheet" href="style.css"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  </head> 
+  <body> 
+
+
+    <div class="wrapper"> 
+      <button onclick="startGame()" id="start">
+        <i class="fas fa-play"></i>
+      </button>
+      
+      <button onclick="resetGame()" id="reset">
+        <i class="fa-solid fa-arrows-rotate"></i>
+      </button>
+
+      <button onclick="openPopup()" id="info">
+        <i class="fa-solid fa-info"></i>
+      </button>
+      
+      <ul class="cards"> 
+        <li class="card"> 
+          <div class="view front-view"> 
+            <img src="images/que_icon.svg" alt="icon"> 
+          </div> 
+
+          <div class="view back-view"> 
+            <img src="images/img-1.png" alt="card-img"> 
+          </div> 
+        </li> 
+        
+        <li class="card"> 
+          <div class="view front-view"> 
+            <img src="images/que_icon.svg" alt="icon"> 
+          </div> 
+          
+          <div class="view back-view"> 
+            <img src="images/img-6.png" alt="card-img"> 
+          </div>
+        </li> 
+        
+        <li class="card"> 
+          <div class="view front-view"> 
+            <img src="images/que_icon.svg" alt="icon"> 
+          </div> 
+          
+          <div class="view back-view"> 
+            <img src="images/img-3.png" alt="card-img"> 
+          </div> 
+        </li> 
+        
+        <li class="card"> 
+          <div class="view front-view"> 
+            <img src="images/que_icon.svg" alt="icon"> 
+          </div> 
+
+          <div class="view back-view"> 
+            <img src="images/img-2.png" alt="card-img"> 
+          </div> 
+        </li> 
+        
+        <li class="card"> 
+          <div class="view front-view"> 
+            <img src="images/que_icon.svg" alt="icon"> 
+          </div> 
+
+          <div class="view back-view"> 
+            <img src="images/img-1.png" alt="card-img"> 
+          </div> 
+        </li> 
+
+        <li class="card"> 
+          <div class="view front-view"> 
+            <img src="images/que_icon.svg" alt="icon"> 
+          </div> 
+
+          <div class="view back-view"> 
+            <img src="images/img-5.png" alt="card-img"> 
+          </div>
+        </li> 
+
+        <li class="card"> 
+          <div class="view front-view"> 
+            <img src="images/que_icon.svg" alt="icon"> 
+          </div> 
+
+          <div class="view back-view"> 
+            <img src="images/img-2.png" alt="card-img"> 
+          </div> 
+        </li> 
+
+        <li class="card"> 
+          <div class="view front-view"> 
+            <img src="images/que_icon.svg" alt="icon"> 
+          </div>
+
+          <div class="view back-view"> 
+            <img src="images/img-6.png" alt="card-img"> 
+          </div> 
+        </li>
+
+        <li class="card"> 
+          <div class="view front-view"> 
+            <img src="images/que_icon.svg" alt="icon"> 
+          </div>
+
+          <div class="view back-view"> 
+            <img src="images/img-3.png" alt="card-img"> 
+          </div> 
+        </li> 
+
+        <li class="card"> 
+          <div class="view front-view"> 
+            <img src="images/que_icon.svg" alt="icon"> 
+          </div> 
+
+          <div class="view back-view"> 
+            <img src="images/img-4.png" alt="card-img"> 
+          </div> 
+        </li> 
+
+        <li class="card"> 
+          <div class="view front-view"> 
+            <img src="images/que_icon.svg" alt="icon"> 
+          </div> 
+
+          <div class="view back-view"> 
+            <img src="images/img-5.png" alt="card-img"> 
+          </div> 
+        </li> 
+        
+        <li class="card"> 
+          <div class="view front-view"> 
+            <img src="images/que_icon.svg" alt="icon"> 
+          </div> 
+          
+          <div class="view back-view"> 
+            <img src="images/img-4.png" alt="card-img"> 
+          </div> 
+        </li> 
+        
+        <li class="card"> 
+          <div class="view front-view"> 
+            <img src="images/que_icon.svg" alt="icon"> 
+          </div> 
+
+          <div class="view back-view"> 
+            <img src="images/img-4.png" alt="card-img"> 
+          </div> 
+        </li> 
+        
+        <li class="card"> 
+          <div class="view front-view"> 
+            <img src="images/que_icon.svg" alt="icon"> 
+          </div> 
+
+          <div class="view back-view"> 
+            <img src="images/img-4.png" alt="card-img"> 
+          </div> 
+        </li> 
+        
+        <li class="card"> 
+          <div class="view front-view"> 
+            <img src="images/que_icon.svg" alt="icon"> 
+          </div> 
+
+          <div class="view back-view"> 
+            <img src="images/img-4.png" alt="card-img"> 
+          </div>
+        </li> 
+        
+        <li class="card"> 
+          <div class="view front-view"> 
+            <img src="images/que_icon.svg" alt="icon"> 
+          </div> 
+
+          <div class="view back-view"> 
+            <img src="images/img-4.png" alt="card-img"> 
+          </div> 
+        </li> 
+      </ul> 
+
+      <div id="timer">Time: <span id="timer-display">60</span> seconds</div>
+
+      <div id="popup" class="popup">
+        <div class="popup-content">  
+          <img src="images/memory match logo.png" alt="">
+          <h2>About the Game</h2>
+          <p>This Memory Match game is created by RaffDev.</p>
+          <p>Thank you for playing!</p>
+          <a href="https://github.com/RaffDev31" target="_blank">See my other projects</a>
+          <button class="close-popup" onclick="closePopup()">
+            <i class="fa-solid fa-check"></i>
+          </button>
+        </div>
+      </div>
+    </div> 
+    <script src="script.js"></script> 
+  
+  </body>
+</html>
