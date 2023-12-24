@@ -114,7 +114,13 @@ button {
     font-weight: bold;
     transform: translateX(450%)
   }
-  
+
+  .popup-content span {
+    cursor: pointer;
+    float: right;
+    color: #F8F8F8;
+  }
+
   .close-popup:hover,
   .close-popup:focus {
     color: #3c096c;
@@ -199,7 +205,7 @@ button {
   .popup-content img {
     width: 100px;
     height: 20%;
-    transform: translateX(200%);
+    transform: translateX(170%);
     border-radius: 10%;
   }
 
@@ -222,8 +228,15 @@ button {
     text-align: center;
     font-size: 28px;
     font-weight: bold;
-    transform: translateX(550%)
+    transform: translateX(520%)
   }
+
+ .popup-content span {
+    cursor: pointer;
+    float: right;
+    color: #F8F8F8;
+  }
+  
 }
 
 
@@ -259,7 +272,7 @@ button {
   .popup-content img {
     width: 100px;
     height: 20%;
-    transform: translateX(100%);
+    transform: translateX(95%);
     border-radius: 10%;
   }
 
@@ -281,8 +294,15 @@ button {
     text-align: center;
     font-size: 28px;
     font-weight: bold;
-    transform: translateX(300%)
+    transform: translateX(320%)
   }
+
+  .popup-content span {
+    cursor: pointer;
+    float: right;
+    color: #F8F8F8;
+  }
+  
 }
 
 @media screen and (max-width: 530px) {

@@ -19,7 +19,7 @@
         <i class="fa-solid fa-arrows-rotate"></i>
       </button>
 
-      <button onclick="openPopup()" id="info">
+      <button onclick="openInfoPopup()" id="info">
         <i class="fa-solid fa-info"></i>
       </button>
       
@@ -187,18 +187,26 @@
 
       <div id="timer">Time: <span id="timer-display">60</span> seconds</div>
 
-      <div id="popup" class="popup">
+      <div id="info-popup" class="popup">
         <div class="popup-content">  
           <img src="images/memory match logo.png" alt="">
-          <h2>About the Game</h2>
+          <h2>About The Game</h2>
           <p>This Memory Match game is created by RaffDev.</p>
           <p>Thank you for playing!</p>
           <a href="https://github.com/RaffDev31" target="_blank">See my other projects</a>
-          <button class="close-popup" onclick="closePopup()">
+          <button class="close-popup" onclick="closeInfoPopup()">
             <i class="fa-solid fa-check"></i>
           </button>
         </div>
       </div>
+
+      <div id="success-popup" class="popup">
+        <div class="popup-content" >  
+          <h2>Congratulations!</h2>
+          <p>You've matched all cards</p>
+        </div>
+      </div>
+      
     </div> 
     <script src="script.js"></script> 
   

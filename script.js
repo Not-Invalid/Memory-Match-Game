@@ -2,6 +2,7 @@ const cards = document.querySelectorAll(".card");
 const timerDisplay = document.getElementById("timer-display");
 const start = document.getElementById("start");
 const reset = document.getElementById("reset");
+const successPopup = document.getElementById("success-popup");
 
 let matched = 0;
 let cardOne, cardTwo;
@@ -26,9 +27,11 @@ function matchCards(img1, img2) {
   if (img1 === img2) {
     matched++;
     if (matched == 8) {
+      clearInterval(timer);
+      openSuccessPopup();
       setTimeout(() => {
+        closePopup('success-popup'); 
         shuffleCard();
-        alert("Congratulations! You've matched all cards.")
       }, 1000);
     }
     cardOne.removeEventListener("click", flipCard);
@@ -70,17 +73,41 @@ function updateTimerDisplay(seconds) {
 
 function resetGame() {
     clearInterval(timer);
-    startGame(); 
+    matched = 0;
+    disableDeck = false;
+    cardOne = cardTwo = "";
+    cards.forEach(card => {
+      card.classList.remove("flip","shake");
+      card.removeEventListener("click", flipCard);
+    });
+
+    startGame();  
+     
 }
 
-function openPopup() {
-  const aboutPopup = document.getElementById("popup");
-  aboutPopup.style.display = "block";
+function openInfoPopup() {
+  openPopup('info-popup');
+}
+function closeInfoPopup() {
+  closePopup('info-popup');
 }
 
-function closePopup() {
-  const aboutPopup = document.getElementById("popup");
-  aboutPopup.style.display = "none";
+function openPopup(popupId) {
+  const popup = document.getElementById(popupId);
+  popup.style.display = 'block';
+}
+
+function closePopup(popupId) {
+  const popup = document.getElementById(popupId);
+  popup.style.display = 'none';
+}
+
+function openSuccessPopup() {
+  openPopup('success-popup');
+}
+
+function closeSuccessPopup() {
+  closePopup('success-popup');
 }
 
 function startGame() {
